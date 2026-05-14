@@ -1,0 +1,28 @@
+# Binaries and build output
+bin/
+dist/
+build/
+*.exe
+*.test
+
+# Coverage and profiling
+coverage.out
+*.coverprofile
+*.prof
+
+# Go workspace files
+go.work
+go.work.sum
+
+# Local input/output files
+config.json
+events
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
