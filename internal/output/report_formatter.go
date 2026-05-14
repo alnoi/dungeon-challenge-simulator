@@ -14,7 +14,8 @@ func FormatReport(lines []domain.ReportLine) string {
 
 	for _, line := range lines {
 		builder.WriteString("\n")
-		builder.WriteString(fmt.Sprintf(
+		fmt.Fprintf(
+			&builder,
 			"[%s] %d [%s, %s, %s] HP:%d",
 			line.State.String(),
 			line.PlayerID,
@@ -22,7 +23,7 @@ func FormatReport(lines []domain.ReportLine) string {
 			timeutil.FormatDuration(line.AverageFloorClearTime),
 			timeutil.FormatDuration(line.BossKillTime),
 			line.Health,
-		))
+		)
 	}
 
 	return builder.String()

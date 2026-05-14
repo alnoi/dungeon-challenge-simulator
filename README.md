@@ -75,6 +75,7 @@ make run
 
 ```bash
 make fmt          # format Go code with gofmt
+make lint         # run golangci-lint
 make test         # run all tests
 make sample-data  # create sample config.json and events
 make run          # run the app with CONFIG and EVENTS paths

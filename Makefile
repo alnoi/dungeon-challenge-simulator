@@ -1,4 +1,4 @@
-.PHONY: fmt test run sample-data
+.PHONY: fmt lint test run sample-data
 
 APP := ./cmd/app
 CONFIG ?= config.json
@@ -6,6 +6,9 @@ EVENTS ?= events
 
 fmt:
 	gofmt -w cmd internal tests
+
+lint:
+	golangci-lint run
 
 test:
 	go test ./...
